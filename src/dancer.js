@@ -1,4 +1,3 @@
-// Creates and returns a new dancer object that can step
 var Dancer = function(top, left, timeBetweenSteps) {
   this.top = top;
   this.left = left;
