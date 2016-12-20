@@ -3,13 +3,15 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background: url(assets/background.jpg) no-repeat;
+  background-size: cover;
+  background-position: 0 -300px;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, .lineUpButton{
   padding:5px 12px;
   float:right;
 }
@@ -19,6 +21,12 @@ body, a:link, a:visited, a:active{
 }
 .title{
   background-color: #777;
+}
+
+.content{
+  height: 80%;
+  width: 90%;
+  margin: auto;
 }
 .dancer{
   border:10px solid red;
@@ -34,4 +42,45 @@ body, a:link, a:visited, a:active{
   border:10px solid yellow;
   border-radius:10px;
   position:absolute;
+}
+.elf{
+  height: 100px;
+  width: 100px;
+  background: url(assets/elf.png) no-repeat;
+  position: absolute;
+}
+.snowman{
+  height: 100px;
+  width: 100px;
+  background: url(assets/snowman.png) no-repeat;
+  position: absolute;
+}
+.gift{
+  height: 140px;
+  width: 105px;
+  background: url(assets/gift.gif) no-repeat;
+  position: absolute;
+}
+
+.grinch{
+  height: 150px;
+  width: 150px;
+  background: url(assets/grinch.gif) no-repeat;
+  position: absolute;
+
+}
+
+.ginger{
+  height: 150px;
+  width: 150px;
+  background: url(assets/ginger.gif) no-repeat;
+  position: absolute;
+
+}
+
+.badsnowman {
+  height: 140px;
+  width: 105px;
+  background: url(assets/badsnowman.gif) no-repeat;
+  position: absolute;
 }
