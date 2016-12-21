@@ -12,6 +12,6 @@ GrinchDancer.prototype.oldStep = Dancer.prototype.step;
 
 GrinchDancer.prototype.step = function() {
   this.oldStep();
-  this.$node.animate({top: '-=50px'}, 250);
-  this.$node.animate({top: '+=50px'}, 250);
+  this.$node.animate({left: '-=50px'}, 250);
+  this.$node.animate({left: '+=50px'}, 250);
 };

@@ -12,6 +12,6 @@ BadSnowMan.prototype.oldStep = Dancer.prototype.step;
 
 BadSnowMan.prototype.step = function() {
   this.oldStep();
-  this.$node.animate({left: '+=50'}, 250);
-  this.$node.animate({left: '-=50'}, 250);
+  this.$node.slideUp(250);
+  this.$node.slideDown(250);
 };

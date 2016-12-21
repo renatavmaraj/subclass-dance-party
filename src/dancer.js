@@ -19,13 +19,11 @@ Dancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
-Dancer.prototype.lineUpNice = function(left) {
-  this.$node.animate({top: "500", left: left});
+Dancer.prototype.lineUpNice = function(top) {
+  this.$node.animate({top: top, left: 400});
 };
 
-Dancer.prototype.lineUpNaughty = function(left) {
-  this.$node.animate({top: "200", left: left});
+Dancer.prototype.lineUpNaughty = function(top) {
+  this.$node.animate({top: top, left: 900});
 };
-
-
 

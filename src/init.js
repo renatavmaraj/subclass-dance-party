@@ -4,14 +4,21 @@ $(document).ready(function() {
   $('.lineUpButton').on('click', function(event) {
     var niceOffset = 100;
     var naughtyOffset = 100;
+    var $niceNode = $("<span class='nice-banner'>Santa's Nice Dancers</span>");
+    var $naughtyNode = $("<span class='naughty-banner'>Santa's Naughty Dancers</span>");
+    $niceNode.css({top: 35, left: 350});
+    $naughtyNode.css({top: 35, left: 800});
+    $('.content').append($niceNode);
+    $('.content').append($naughtyNode);
     for (var i = 0; i < window.dancers.length; i ++) {
+      console.log(i, window.dancers[i]);
       if (window.dancers[i].$node.hasClass('nice')) {
         window.dancers[i].lineUpNice(niceOffset);
         niceOffset += 100;
       }
       if (window.dancers[i].$node.hasClass('naughty')) {
         window.dancers[i].lineUpNaughty(naughtyOffset);
-        naughtyOffset -= 100;
+        naughtyOffset += 100;
       }
     }
   });
@@ -39,10 +46,25 @@ $(document).ready(function() {
     var dancer = new dancerMakerFunction(
       $('.content').height() * Math.random(),
       $('.content').width() * Math.random(),
-      Math.random() * 1000
+      Math.random() * 1000 + 500
     );
     $('.content').append(dancer.$node);
     window.dancers.push(dancer);
   });
+
+  $(document).on("mouseenter", ".nice", function() {
+    $( this ).append( $( "<span class='nice-banner'>NICE</span>" ) );
+  });
+  $(document).on("mouseleave", ".nice", function() {
+    $( this ).find( "span:last" ).remove();
+  });
+
+  $(document).on("mouseenter", ".naughty", function() {
+    $( this ).append( $( "<span class='naughty-banner'>NAUGHTY</span>" ) );
+  });
+  $(document).on("mouseleave", ".naughty", function() {
+    $( this ).find( "span:last" ).remove();
+  });
+
 });
 
